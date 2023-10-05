@@ -1,0 +1,18 @@
+{
+  "name": "my-get",
+  "version": "1.0.0",
+  "description": "使用 you-get 下载最高质量视频",
+  "main": "index.js",
+  "bin": {
+    "my-get": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
