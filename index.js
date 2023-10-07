@@ -35,7 +35,7 @@ if (!argv.url && !argv.bv) {
   console.log('使用 --url=视频地址 或 --bv=BV号，B站视频ID， 两者必须设置一个')
   process.exit(1)
 }
-if (!argv.end || argv.end <= 0) {
+if (typeof argv.end !== 'undefined' && argv.end <= 0) {
   console.log('使用 --end=合集个数，必须大于0，单个设置为 1')
   process.exit(1)
 }
@@ -47,7 +47,7 @@ if (typeof argv.begin !== 'undefined') {
 }
 
 const videoUrl = argv.bv ? `https://www.bilibili.com/video/${argv.bv}` : argv.url
-const lastNumber = parseInt(argv.end)
+const lastNumber = parseInt(argv.end || 1)
 const firstNumber = parseInt(argv.begin || 1) - 1
 
 const start = async () => {

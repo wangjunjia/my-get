@@ -5,8 +5,10 @@
 ```
 # example
 my-get --bv=BV_No --end=video_count # for bilibili.com
+my-get --bv=BV_No # download single video
 my-get --bv=BV_No --begin=2 --end=3 # download bilibili No2 to No3 video
 
+my-get --url=video_url # download single video
 my-get --url=video_url --end=1 # download one video
 my-get --url=video_url --end=3 # download playlist video No1 to No3
 my-get --url=video_url --begin=2 --end=3 # download No2 to No3 video
