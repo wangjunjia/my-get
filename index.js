@@ -83,7 +83,14 @@ const start = async () => {
     console.log(`format list => ${res.formatList.map(it => it.format).join(' ')}`)
     console.log(`format => ${formatItem.quality}`)
 
-    await download('you-get', [`--format=${formatItem.format}`, `--output-filename=${JSON.stringify(res.title)}`, url])
+    await download(
+      'you-get',
+      [
+        `--format=${formatItem.format}`,
+        `--output-filename=${res.title}`,
+        url
+      ]
+    )
   }
 }
 
