@@ -3,6 +3,16 @@
 使用 `you-get` 批量下载视频时，会发现有些视频的质量不是最高的，是因为高质量的不是 mp4 或者不是默认下载质量，这里改善了一下，每次下载之前获取一下对应视频的质量列表，按照质量大小从高到低排序，取第一个高质量的下载，当然有些下载下来的格式不是 mp4 格式的，可能是 flv 等，需要使用 `vlc` 等工具播放。
 
 ```
+# example
+my-get --bv=BV_No --end=video_count # for bilibili.com
+my-get --bv=BV_No --begin=2 --end=3 # download bilibili No2 to No3 video
+
+my-get --url=video_url --end=1 # download one video
+my-get --url=video_url --end=3 # download playlist video No1 to No3
+my-get --url=video_url --begin=2 --end=3 # download No2 to No3 video
+```
+
+```
 $ my-get -v
 
 my-get <1.0.0> 使用 you-get 下载最高质量视频
